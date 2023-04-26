@@ -56,35 +56,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
+    <Compile Include="BS_Layer\BLDetail.cs" />
+    <Compile Include="BS_Layer\BLInvoice.cs" />
     <Compile Include="BS_Layer\BLManuafacture.cs" />
+    <Compile Include="BS_Layer\BLProduct.cs" />
     <Compile Include="BS_Layer\BLStock.cs" />
     <Compile Include="BS_Layer\BLSupplier.cs" />
     <Compile Include="BS_Layer\BLType.cs" />
-    <Compile Include="CStore.Context.cs">
+    <Compile Include="CStoreNew.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CStore.Context.tt</DependentUpon>
+      <DependentUpon>CStoreNew.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CStore.cs">
+    <Compile Include="CStoreNew.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
-    <Compile Include="CStore.Designer.cs">
+    <Compile Include="CStoreNew.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CStore.edmx</DependentUpon>
+      <DependentUpon>CStoreNew.edmx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\FrmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\FrmDetail.Designer.cs">
+      <DependentUpon>FrmDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\FrmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\FrmInvoice.Designer.cs">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\FrmManuafacture.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\FrmManuafacture.Designer.cs">
       <DependentUpon>FrmManuafacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\FrmStock.cs">
       <SubType>Form</SubType>
@@ -105,10 +126,10 @@
       <DependentUpon>FrmType.cs</DependentUpon>
     </Compile>
     <Compile Include="Detail.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -117,30 +138,39 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Manuafacture.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Type.cs">
-      <DependentUpon>CStore.tt</DependentUpon>
+      <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhMuc\FrmDetail.resx">
+      <DependentUpon>FrmDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\FrmInvoice.resx">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\FrmManuafacture.resx">
       <DependentUpon>FrmManuafacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\FrmStock.resx">
       <DependentUpon>FrmStock.cs</DependentUpon>
@@ -160,12 +190,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="CStore.edmx">
+    <EntityDeploy Include="CStoreNew.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CStore.Designer.cs</LastGenOutput>
+      <LastGenOutput>CStoreNew.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CStore.edmx.diagram">
-      <DependentUpon>CStore.edmx</DependentUpon>
+    <None Include="CStoreNew.edmx.diagram">
+      <DependentUpon>CStoreNew.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -182,20 +212,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CStore.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CStore.Context.cs</LastGenOutput>
-      <DependentUpon>CStore.edmx</DependentUpon>
-    </Content>
-    <Content Include="CStore.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CStore.edmx</DependentUpon>
-      <LastGenOutput>CStore.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CStoreNew.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CStoreNew.edmx</DependentUpon>
+      <LastGenOutput>CStoreNew.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CStoreNew.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CStoreNew.edmx</DependentUpon>
+      <LastGenOutput>CStoreNew.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

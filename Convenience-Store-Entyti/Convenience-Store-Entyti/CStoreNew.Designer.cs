@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\CStore.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\UNIVERSITY\2nd\Semester 2\Windows Programming\FINAL PROJECT\Entity\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\CStoreNew.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

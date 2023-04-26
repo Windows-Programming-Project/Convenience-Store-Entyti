@@ -29,7 +29,6 @@ namespace Convenience_Store_Entyti
         public string eAddress { get; set; }
         public string ePosition { get; set; }
         public Nullable<double> eSalary { get; set; }
-        public byte[] eImage { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Account> Accounts { get; set; }

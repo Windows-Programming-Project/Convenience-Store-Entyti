@@ -11,28 +11,31 @@ using System.Windows.Forms;
 
 namespace Convenience_Store_Entyti.DanhMuc
 {
-    public partial class FrmType : Form
+    public partial class FrmProduct : Form
     {
         // Khai báo biến kiểm tra việc Thêm hay Sửa dữ liệu
         bool Them;
         string err;
-        BLType dbTY = new BLType();
-        public FrmType()
+        BLProduct dbTY = new BLProduct();
+        public FrmProduct()
         {
             InitializeComponent();
-        }
+        }       
         void LoadData()
         {
             try
             {
 
                 // Đưa dữ liệu lên DataGridView
-                dgvTYPE.DataSource = dbTY.TakeType();
+                dgvPRODUCT.DataSource = dbTY.TakeProduct();
                 // Thay đổi độ rộng cột
-                dgvTYPE.AutoResizeColumns();
+                dgvPRODUCT.AutoResizeColumns();
                 // Xóa trống các đối tượng trong Panel
-                this.txttID.ResetText();
-                this.txttName.ResetText();
+                this.txtIDP.ResetText();
+                this.txtpName.ResetText();
+                this.txtpPrice.ResetText();
+                this.txtIDT.ResetText();
+                this.txtIDB.ResetText();
                 // Không cho thao tác trên các nút Lưu / Hủy
                 this.btnSave.Enabled = false;
                 this.btnCancel.Enabled = false;
@@ -43,70 +46,27 @@ namespace Convenience_Store_Entyti.DanhMuc
                 this.btnDelete.Enabled = true;
 
                 //
-                dgvTYPE_CellClick(null, null);
+                dgvPRODUCT_CellClick(null, null);
             }
             catch
             {
-                MessageBox.Show("Không lấy được nội dung trong table TYPE. Lỗi rồi!!!");
+                MessageBox.Show("Không lấy được nội dung trong table PRODUCT. Lỗi rồi!!!");
             }
         }
-        private void FrmType_Load(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-        private void btnReLoad_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            this.txttID.Enabled = true;
-
-            // Kich hoạt biến Them
-            Them = true;
-            // Xóa trống các đối tượng trong Panel
-            this.txttID.ResetText();
-            this.txttName.ResetText();
-            // Cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnSave.Enabled = true;
-            this.btnCancel.Enabled = true;
-            this.panel.Enabled = true;
-            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
-            this.btnAdd.Enabled = false;
-            this.btnFix.Enabled = false;
-            this.btnDelete.Enabled = false;
-
-            // Đưa con trỏ đến TextField txttID
-            this.txttID.Focus();
-        }
-        private void btnFix_Click(object sender, EventArgs e)
-        {
-            // Kích hoạt biến Sửa
-            Them = false;
-            // Cho phép thao tác trên Panel
-            this.panel.Enabled = true;
-            dgvTYPE_CellClick(null, null);
-            // Cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnSave.Enabled = true;
-            this.btnCancel.Enabled = true;
-            this.panel.Enabled = true;
-            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
-            this.btnAdd.Enabled = false;
-            this.btnFix.Enabled = false;
-            this.btnDelete.Enabled = false;
-
-            // Đưa con trỏ đến TextField txttID
-            this.txttID.Enabled = false;
-            this.txttName.Focus();
-
-        }
-        private void dgvTYPE_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPRODUCT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Thứ tự dòng hiện hành
-            int r = dgvTYPE.CurrentCell.RowIndex;
+            int r = dgvPRODUCT.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel
-            this.txttID.Text = dgvTYPE.Rows[r].Cells[0].Value.ToString();
-            this.txttName.Text = dgvTYPE.Rows[r].Cells[1].Value.ToString();
+            this.txtIDP.Text = dgvPRODUCT.Rows[r].Cells[0].Value.ToString();
+            this.txtpName.Text = dgvPRODUCT.Rows[r].Cells[1].Value.ToString();
+            this.txtpPrice.Text = dgvPRODUCT.Rows[r].Cells[2].Value.ToString();
+            this.txtIDT.Text = dgvPRODUCT.Rows[r].Cells[3].Value.ToString();
+            this.txtIDB.Text = dgvPRODUCT.Rows[r].Cells[4].Value.ToString();
+        }
+        private void FrmProduct_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -118,21 +78,53 @@ namespace Convenience_Store_Entyti.DanhMuc
             // Kiểm tra có nhắp chọn nút Ok không?
             if (traloi == DialogResult.OK) this.Close();
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnReload_Click(object sender, EventArgs e)
         {
-            // Xóa trống các đối tượng trong Panel
-            this.txttID.ResetText();
-            this.txttName.ResetText();
-            // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
-            this.btnAdd.Enabled = true;
-            this.btnFix.Enabled = true;
-            this.btnDelete.Enabled = true;
+            LoadData();
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.txtIDP.Enabled = true;
 
-            // Không cho thao tác trên các nút Lưu / Hủy / Panel
-            this.btnSave.Enabled = false;
-            this.btnCancel.Enabled = false;
-            this.panel.Enabled = false;
-            dgvTYPE_CellClick(null, null);
+            // Kich hoạt biến Them
+            Them = true;
+            // Xóa trống các đối tượng trong Panel
+            this.txtIDP.ResetText();
+            this.txtpName.ResetText();
+            this.txtpPrice.ResetText();
+            this.txtIDT.ResetText();
+            this.txtIDB.ResetText();
+            // Cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnSave.Enabled = true;
+            this.btnCancel.Enabled = true;
+            this.panel.Enabled = true;
+            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
+            this.btnAdd.Enabled = false;
+            this.btnFix.Enabled = false;
+            this.btnDelete.Enabled = false;
+
+            // Đưa con trỏ đến TextField txttID
+            this.txtIDP.Focus();
+        }
+        private void btnFix_Click(object sender, EventArgs e)
+        {
+            // Kích hoạt biến Sửa
+            Them = false;
+            // Cho phép thao tác trên Panel
+            this.panel.Enabled = true;
+            dgvPRODUCT_CellClick(null, null);
+            // Cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnSave.Enabled = true;
+            this.btnCancel.Enabled = true;
+            this.panel.Enabled = true;
+            // Không cho thao tác trên các nút Thêm / Xóa / Thoát
+            this.btnAdd.Enabled = false;
+            this.btnFix.Enabled = false;
+            this.btnDelete.Enabled = false;
+
+            // Đưa con trỏ đến TextField txttID
+            this.txtIDP.Enabled = false;
+            this.txtIDB.Focus();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -143,8 +135,8 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     // Thực hiện lệnh
-                    BLType blTy = new BLType();
-                    blTy.AddType(this.txttID.Text, this.txttName.Text, ref err);
+                    BLProduct blPr = new BLProduct();
+                    blPr.AddProduct(this.txtIDP.Text, this.txtpName.Text, float.Parse(this.txtpPrice.Text), this.txtIDT.Text, this.txtIDB.Text, ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -158,8 +150,9 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 // Thực hiện lệnh
-                BLType blTy = new BLType();
-                blTy.UpdateType(this.txttID.Text, this.txttName.Text, ref err);
+                BLProduct blPr = new BLProduct();
+                blPr.UpdateProduct(this.txtIDP.Text, this.txtpName.Text, float.Parse(this.txtpPrice.Text), this.txtIDT.Text, this.txtIDB.Text, ref err);
+                // Load lại dữ liệu trên DataGridView
                 // Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo
@@ -167,15 +160,35 @@ namespace Convenience_Store_Entyti.DanhMuc
             }
             // Đóng kết nối
         }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Xóa trống các đối tượng trong Panel
+            this.txtIDP.ResetText();
+            this.txtpName.ResetText();
+            this.txtpPrice.ResetText();
+            this.txtIDT.ResetText();
+            this.txtIDB.ResetText();
+            // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát
+            this.btnAdd.Enabled = true;
+            this.btnFix.Enabled = true;
+            this.btnDelete.Enabled = true;
+
+            // Không cho thao tác trên các nút Lưu / Hủy / Panel
+            this.btnSave.Enabled = false;
+            this.btnCancel.Enabled = false;
+            this.panel.Enabled = false;
+            dgvPRODUCT_CellClick(null, null);
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
                 // Thực hiện lệnh
                 // Lấy thứ tự record hiện hành
-                int r = dgvTYPE.CurrentCell.RowIndex;
-                string strTY =
-                dgvTYPE.Rows[r].Cells[0].Value.ToString();
+                int r = dgvPRODUCT.CurrentCell.RowIndex;
+                string strPRO1 = dgvPRODUCT.Rows[r].Cells[0].Value.ToString();
+                string strPRO2 = dgvPRODUCT.Rows[r].Cells[3].Value.ToString();
+                string strPRO3 = dgvPRODUCT.Rows[r].Cells[4].Value.ToString();
                 // Viết câu lệnh SQL
                 // Hiện thông báo xác nhận việc xóa mẫu tin
                 // Khai báo biến traloi
@@ -186,7 +199,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 // Kiểm tra có nhắp chọn nút Ok không?
                 if (traloi == DialogResult.Yes)
                 {
-                    dbTY.DeleteType(ref err, strTY);
+                    dbTY.DeleteProduct(ref err, strPRO1, strPRO2, strPRO3);
                     // Cập nhật lại DataGridView
                     LoadData();
                     // Thông báo

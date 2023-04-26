@@ -46,7 +46,6 @@
           <Property Name="eAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="ePosition" Type="nvarchar" MaxLength="40" />
           <Property Name="eSalary" Type="float" />
-          <Property Name="eImage" Type="image" />
         </EntityType>
         <EntityType Name="Invoice">
           <Key>
@@ -74,7 +73,6 @@
           <Property Name="pName" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="pPrice" Type="float" Nullable="false" />
           <Property Name="tID" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="pImage" Type="image" />
           <Property Name="batchID" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Stock">
@@ -318,7 +316,6 @@
           <Property Name="eAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ePosition" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="eSalary" Type="Double" />
-          <Property Name="eImage" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Accounts" Relationship="Self.FK__Account__eID__3C69FB99" FromRole="Employee" ToRole="Account" />
           <NavigationProperty Name="Invoices" Relationship="Self.FK__Invoice__eID__4CA06362" FromRole="Employee" ToRole="Invoice" />
         </EntityType>
@@ -352,7 +349,6 @@
           <Property Name="pName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="pPrice" Type="Double" Nullable="false" />
           <Property Name="tID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="pImage" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="batchID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Details" Relationship="Self.FK__Detail__pID__5CD6CB2B" FromRole="Product" ToRole="Detail" />
           <NavigationProperty Name="Type" Relationship="Self.FK__Product__tID__59063A47" FromRole="Product" ToRole="Type" />
@@ -505,7 +501,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ConvenienceStoreEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ConvenienceStoreEntityNew" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Details" EntityType="Self.Detail" />
@@ -559,7 +555,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ConvenienceStoreModelStoreContainer" CdmEntityContainer="ConvenienceStoreEntities">
+        <EntityContainerMapping StorageEntityContainer="ConvenienceStoreModelStoreContainer" CdmEntityContainer="ConvenienceStoreEntityNew">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="ConvenienceStoreModel.Account">
               <MappingFragment StoreEntitySet="Account">
@@ -602,7 +598,6 @@
                 <ScalarProperty Name="eAddress" ColumnName="eAddress" />
                 <ScalarProperty Name="ePosition" ColumnName="ePosition" />
                 <ScalarProperty Name="eSalary" ColumnName="eSalary" />
-                <ScalarProperty Name="eImage" ColumnName="eImage" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -633,7 +628,6 @@
                 <ScalarProperty Name="pName" ColumnName="pName" />
                 <ScalarProperty Name="pPrice" ColumnName="pPrice" />
                 <ScalarProperty Name="tID" ColumnName="tID" />
-                <ScalarProperty Name="pImage" ColumnName="pImage" />
                 <ScalarProperty Name="batchID" ColumnName="batchID" />
               </MappingFragment>
             </EntityTypeMapping>

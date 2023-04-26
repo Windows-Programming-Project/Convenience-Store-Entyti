@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ConvenienceStoreModelStoreContainer" CdmEntityContainer="ConvenienceStoreEntities">
+  <EntityContainerMapping StorageEntityContainer="ConvenienceStoreModelStoreContainer" CdmEntityContainer="ConvenienceStoreEntityNew">
     <EntitySetMapping Name="Accounts">
       <EntityTypeMapping TypeName="ConvenienceStoreModel.Account">
         <MappingFragment StoreEntitySet="Account">
@@ -32,6 +32,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ConvenienceStoreModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="eID" ColumnName="eID" />
+          <ScalarProperty Name="eName" ColumnName="eName" />
+          <ScalarProperty Name="eBirthdate" ColumnName="eBirthdate" />
+          <ScalarProperty Name="eGender" ColumnName="eGender" />
+          <ScalarProperty Name="ePhone" ColumnName="ePhone" />
+          <ScalarProperty Name="eAddress" ColumnName="eAddress" />
+          <ScalarProperty Name="ePosition" ColumnName="ePosition" />
+          <ScalarProperty Name="eSalary" ColumnName="eSalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Invoices">
       <EntityTypeMapping TypeName="ConvenienceStoreModel.Invoice">
         <MappingFragment StoreEntitySet="Invoice">
@@ -49,6 +63,17 @@
           <ScalarProperty Name="mID" ColumnName="mID" />
           <ScalarProperty Name="mName" ColumnName="mName" />
           <ScalarProperty Name="mLocation" ColumnName="mLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ConvenienceStoreModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="pName" ColumnName="pName" />
+          <ScalarProperty Name="pPrice" ColumnName="pPrice" />
+          <ScalarProperty Name="tID" ColumnName="tID" />
+          <ScalarProperty Name="batchID" ColumnName="batchID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -87,31 +112,6 @@
         <MappingFragment StoreEntitySet="Type">
           <ScalarProperty Name="tID" ColumnName="tID" />
           <ScalarProperty Name="tName" ColumnName="tName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Employees">
-      <EntityTypeMapping TypeName="ConvenienceStoreModel.Employee">
-        <MappingFragment StoreEntitySet="Employee">
-          <ScalarProperty Name="eSalary" ColumnName="eSalary" />
-          <ScalarProperty Name="ePosition" ColumnName="ePosition" />
-          <ScalarProperty Name="eAddress" ColumnName="eAddress" />
-          <ScalarProperty Name="ePhone" ColumnName="ePhone" />
-          <ScalarProperty Name="eGender" ColumnName="eGender" />
-          <ScalarProperty Name="eBirthdate" ColumnName="eBirthdate" />
-          <ScalarProperty Name="eName" ColumnName="eName" />
-          <ScalarProperty Name="eID" ColumnName="eID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="ConvenienceStoreModel.Product">
-        <MappingFragment StoreEntitySet="Product">
-          <ScalarProperty Name="batchID" ColumnName="batchID" />
-          <ScalarProperty Name="tID" ColumnName="tID" />
-          <ScalarProperty Name="pPrice" ColumnName="pPrice" />
-          <ScalarProperty Name="pName" ColumnName="pName" />
-          <ScalarProperty Name="pID" ColumnName="pID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
