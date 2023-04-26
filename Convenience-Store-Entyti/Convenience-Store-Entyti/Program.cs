@@ -19,8 +19,8 @@ namespace Convenience_Store_Entyti
             //Application.Run(new FrmMain());
             //Application.Run(new FrmManuafacture());
             //Application.Run(new FrmStock());
-            //Application.Run(new FrmSupplier());
-            Application.Run(new FrmType());
+            //Application.Run(new FrmManuafacture());
+            Application.Run(new FrmInvoice());
         }
     }
 }

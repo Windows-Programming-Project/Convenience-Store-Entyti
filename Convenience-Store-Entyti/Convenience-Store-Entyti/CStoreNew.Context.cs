@@ -13,10 +13,10 @@ namespace Convenience_Store_Entyti
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ConvenienceStoreEntities : DbContext
+    public partial class ConvenienceStoreEntityNew : DbContext
     {
-        public ConvenienceStoreEntities()
-            : base("name=ConvenienceStoreEntities")
+        public ConvenienceStoreEntityNew()
+            : base("name=ConvenienceStoreEntityNew")
         {
         }
     

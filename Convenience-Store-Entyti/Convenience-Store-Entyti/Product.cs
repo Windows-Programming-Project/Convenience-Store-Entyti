@@ -24,7 +24,6 @@ namespace Convenience_Store_Entyti
         public string pName { get; set; }
         public double pPrice { get; set; }
         public string tID { get; set; }
-        public byte[] pImage { get; set; }
         public string batchID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

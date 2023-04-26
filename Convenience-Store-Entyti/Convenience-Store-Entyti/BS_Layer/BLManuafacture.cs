@@ -11,7 +11,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeManuafacture()
         {
-            ConvenienceStoreEntities qlstoreEntity = new ConvenienceStoreEntities();
+            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
             var mas = from p in qlstoreEntity.Manuafactures select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("mID");
@@ -25,7 +25,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddManuafacture(string mID, string mName,string mLocation, ref string err)
         {
-            ConvenienceStoreEntities qlstoreEntity = new ConvenienceStoreEntities();
+            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
             Manuafacture ma = new Manuafacture();
             ma.mID = mID; ma.mName = mName;ma.mLocation = mLocation;
             qlstoreEntity.Manuafactures.Add(ma);
@@ -34,7 +34,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteManuafacture(ref string err, string mID)
         {
-            ConvenienceStoreEntities qlstoreEntity = new ConvenienceStoreEntities();
+            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
             Manuafacture ma = new Manuafacture();
             ma.mID = mID;
             qlstoreEntity.Manuafactures.Attach(ma);
@@ -44,7 +44,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateManuafacture(string mID, string mName,string mLocation, ref string err)
         {
-            ConvenienceStoreEntities qlstoreEntity = new ConvenienceStoreEntities();
+            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
             var maQuery = (from ma in qlstoreEntity.Manuafactures
                            where ma.mID == mID
                            select ma).SingleOrDefault();

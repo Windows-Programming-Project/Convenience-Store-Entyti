@@ -106,12 +106,9 @@ namespace Convenience_Store_Entyti.DanhMuc
             // Thứ tự dòng hiện hành
             int r = dgvMANUAFACTURE.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel
-            this.txtmID.Text =
-            dgvMANUAFACTURE.Rows[r].Cells[0].Value.ToString();
-            this.txtmName.Text =
-            dgvMANUAFACTURE.Rows[r].Cells[1].Value.ToString();
-            this.txtmLocation.Text =
-            dgvMANUAFACTURE.Rows[r].Cells[2].Value.ToString();
+            this.txtmID.Text =  dgvMANUAFACTURE.Rows[r].Cells[0].Value.ToString();
+            this.txtmName.Text = dgvMANUAFACTURE.Rows[r].Cells[1].Value.ToString();
+            this.txtmLocation.Text = dgvMANUAFACTURE.Rows[r].Cells[2].Value.ToString();
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
