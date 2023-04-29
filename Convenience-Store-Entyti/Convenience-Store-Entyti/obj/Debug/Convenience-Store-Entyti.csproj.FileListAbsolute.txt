@@ -39,3 +39,28 @@ D:\UNIVERSITY\2nd\Semester 2\Windows Programming\FINAL PROJECT\Entity\Convenienc
 D:\UNIVERSITY\2nd\Semester 2\Windows Programming\FINAL PROJECT\Entity\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmDetail.resources
 D:\UNIVERSITY\2nd\Semester 2\Windows Programming\FINAL PROJECT\Entity\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmInvoice.resources
 D:\UNIVERSITY\2nd\Semester 2\Windows Programming\FINAL PROJECT\Entity\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmProduct.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Convenience-Store-Entyti.exe.config
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Convenience-Store-Entyti.exe
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Convenience-Store-Entyti.pdb
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\EntityFramework.dll
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\EntityFramework.SqlServer.dll
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\EntityFramework.xml
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\EntityFramework.SqlServer.xml
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.csproj.AssemblyReference.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.csproj.SuggestedBindingRedirects.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmAccount.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmCustomer.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmDetail.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmEmployee.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmInvoice.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmManuafacture.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmProduct.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmStock.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmSupplier.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmType.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.Properties.Resources.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.csproj.GenerateResource.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.csproj.CoreCompileInputs.cache
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.csproj.CopyComplete
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.exe
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.pdb

@@ -24,7 +24,7 @@ namespace Convenience_Store_Entyti.BS_Layer
             }
             return dt;
         }
-        public bool AddDetail(string iID, string pID, int dAmount, float dPrice, ref string err)
+       public bool AddDetail(string iID, string pID, int dAmount, float dPrice, ref string err)
         {
             ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
             Detail det = new Detail();
