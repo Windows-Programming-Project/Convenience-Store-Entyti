@@ -15,6 +15,20 @@ namespace Convenience_Store_Entyti
         public FrmMain()
         {
             InitializeComponent();
+           // userControlCustomer1.Visible = false;
+           // firstUserControlEmp1.BringToFront();
+        }
+
+        private void btEmpManagement_Click(object sender, EventArgs e)
+        {
+            //userControlCustomer1.Visible = true;
+            //firstUserControlEmp1.Visible = false;
+           // userControlCustomer1.BringToFront();
+        }
+
+        private void ptbShutDown_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

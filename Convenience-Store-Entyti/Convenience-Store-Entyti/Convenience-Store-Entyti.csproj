@@ -86,6 +86,12 @@
     <Compile Include="Customer.cs">
       <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\FirstUserControlEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\FirstUserControlEmp.Designer.cs">
+      <DependentUpon>FirstUserControlEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\FrmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,18 @@
     <Compile Include="DanhMuc\FrmType.Designer.cs">
       <DependentUpon>FrmType.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\UserControlCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\UserControlCustomer.Designer.cs">
+      <DependentUpon>UserControlCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\UserControlOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\UserControlOrder.Designer.cs">
+      <DependentUpon>UserControlOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detail.cs">
       <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
@@ -181,6 +199,9 @@
     <Compile Include="Type.cs">
       <DependentUpon>CStoreNew.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhMuc\FirstUserControlEmp.resx">
+      <DependentUpon>FirstUserControlEmp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\FrmAccount.resx">
       <DependentUpon>FrmAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +232,15 @@
     <EmbeddedResource Include="DanhMuc\FrmType.resx">
       <DependentUpon>FrmType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\UserControlCustomer.resx">
+      <DependentUpon>UserControlCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\UserControlOrder.resx">
+      <DependentUpon>UserControlOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -219,6 +249,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="CStoreNew.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -255,6 +286,24 @@
       <DependentUpon>CStoreNew.edmx</DependentUpon>
       <LastGenOutput>CStoreNew.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Invoice.png" />
+    <None Include="Resources\invoice_detail.png" />
+    <None Include="Resources\manuafacture.png" />
+    <None Include="Resources\product.png" />
+    <None Include="Resources\supplier.png" />
+    <None Include="Resources\types.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\stock.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\employee1.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\shutdown1.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\homeStore.png" />
+    <None Include="Resources\shutdown.png" />
+    <None Include="Resources\tool-paintbrush_115145.png" />
+    <None Include="Resources\draw_line_icon-icons.com_51076.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

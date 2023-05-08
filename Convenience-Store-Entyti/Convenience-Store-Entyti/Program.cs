@@ -16,14 +16,14 @@ namespace Convenience_Store_Entyti
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmMain());
+            Application.Run(new FrmMain());
             //Application.Run(new FrmManuafacture());
             //Application.Run(new FrmStock());
             //Application.Run(new FrmManuafacture());
             //Application.Run(new FrmInvoice());
             // Application.Run(new FrmEmployee());
              //Application.Run(new FrmCustomer());
-            Application.Run(new FrmAccount());
+           // Application.Run(new FrmAccount());
 
         }
     }

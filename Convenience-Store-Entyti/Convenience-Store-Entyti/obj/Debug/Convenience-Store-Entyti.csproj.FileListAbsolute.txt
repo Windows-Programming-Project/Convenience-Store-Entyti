@@ -64,3 +64,7 @@ D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Sto
 D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.csproj.CopyComplete
 D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.exe
 D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience-Store-Entyti.pdb
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FirstUserControlEmp.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.FrmMain.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.UserControlCustomer.resources
+D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.UserControlOrder.resources
