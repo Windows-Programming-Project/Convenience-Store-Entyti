@@ -11,7 +11,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeProduct()
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             var pro = from p in qlstoreEntity.Products select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("pID");
@@ -27,7 +27,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddProduct(string pID, string pName, float pPrice, string tID, string batchID, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             Product det = new Product();
             det.pID = pID;
             det.pName = pName;
@@ -40,7 +40,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteProduct(ref string err, string pID, string tID, string batchID)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             Product det = new Product();
             det.pID = pID;
             det.tID = tID;
@@ -52,7 +52,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateProduct(string pID, string pName, float pPrice, string tID, string batchID, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             var maQuery = (from det in qlstoreEntity.Products
                            where det.pID == pID
                            select det).SingleOrDefault();

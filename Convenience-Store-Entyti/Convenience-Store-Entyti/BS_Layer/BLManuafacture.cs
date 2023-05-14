@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Convenience_Store_Entyti.BS_Layer
 {
-    class BLManuafacture
+    class BLManuafacturer
     {
-        public DataTable TakeManuafacture()
+        public DataTable TakeManuafacturer()
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            var mas = from p in qlstoreEntity.Manuafactures select p;
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            var mas = from p in qlstoreEntity.Manuafacturers select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("mID");
             dt.Columns.Add("mName");
@@ -23,29 +23,29 @@ namespace Convenience_Store_Entyti.BS_Layer
             }
             return dt;
         }
-        public bool AddManuafacture(string mID, string mName,string mLocation, ref string err)
+        public bool AddManuafacturer(string mID, string mName,string mLocation, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            Manuafacture ma = new Manuafacture();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            Manuafacturer ma = new Manuafacturer();
             ma.mID = mID; ma.mName = mName;ma.mLocation = mLocation;
-            qlstoreEntity.Manuafactures.Add(ma);
+            qlstoreEntity.Manuafacturers.Add(ma);
             qlstoreEntity.SaveChanges();
             return true;
         }
-        public bool DeleteManuafacture(ref string err, string mID)
+        public bool DeleteManuafacturerr(ref string err, string mID)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            Manuafacture ma = new Manuafacture();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            Manuafacturer ma = new Manuafacturer();
             ma.mID = mID;
-            qlstoreEntity.Manuafactures.Attach(ma);
-            qlstoreEntity.Manuafactures.Remove(ma);
+            qlstoreEntity.Manuafacturers.Attach(ma);
+            qlstoreEntity.Manuafacturers.Remove(ma);
             qlstoreEntity.SaveChanges();
             return true;
         }
-        public bool UpdateManuafacture(string mID, string mName,string mLocation, ref string err)
+        public bool UpdateManuafacturer(string mID, string mName,string mLocation, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            var maQuery = (from ma in qlstoreEntity.Manuafactures
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            var maQuery = (from ma in qlstoreEntity.Manuafacturers
                            where ma.mID == mID
                            select ma).SingleOrDefault();
             if (maQuery != null)

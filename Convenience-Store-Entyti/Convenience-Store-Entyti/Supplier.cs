@@ -21,10 +21,10 @@ namespace Convenience_Store_Entyti
         }
     
         public string sID { get; set; }
-        public string mID { get; set; }
         public string sName { get; set; }
+        public string mID { get; set; }
     
-        public virtual Manuafacture Manuafacture { get; set; }
+        public virtual Manuafacturer Manuafacturer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stock> Stocks { get; set; }
     }

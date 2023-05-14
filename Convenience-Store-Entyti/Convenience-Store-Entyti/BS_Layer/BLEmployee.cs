@@ -11,7 +11,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeEmployee()
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             var det = from p in qlstoreEntity.Employees select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("eID");
@@ -33,7 +33,7 @@ namespace Convenience_Store_Entyti.BS_Layer
             try
             {
                 // create a new instance of the DbContext object
-                ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+                ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
 
                 // create a new instance of the Employee object
                 Employee emp = new Employee();
@@ -71,7 +71,7 @@ namespace Convenience_Store_Entyti.BS_Layer
             try
             {
                 // create a new instance of the DbContext object
-                ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+                ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
 
                 // retrieve the existing employee from the database using the specified EID
                 Employee emp = qlstoreEntity.Employees.FirstOrDefault(e => e.eID == EID);
@@ -116,7 +116,7 @@ namespace Convenience_Store_Entyti.BS_Layer
             try
             {
                 // create a new instance of the DbContext object
-                ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+                ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
 
                 // retrieve the existing employee from the database using the specified EID
                 Employee emp = qlstoreEntity.Employees.FirstOrDefault(e => e.eID == eID);

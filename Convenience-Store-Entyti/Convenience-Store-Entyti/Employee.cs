@@ -17,8 +17,8 @@ namespace Convenience_Store_Entyti
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()
         {
-            this.Accounts = new HashSet<Account>();
             this.Invoices = new HashSet<Invoice>();
+            this.Shifts = new HashSet<Shift>();
         }
     
         public string eID { get; set; }
@@ -29,10 +29,13 @@ namespace Convenience_Store_Entyti
         public string eAddress { get; set; }
         public string ePosition { get; set; }
         public Nullable<double> eSalary { get; set; }
+        public string eUsername { get; set; }
+        public string ePassword { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual EmployeeLate EmployeeLate { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shift> Shifts { get; set; }
     }
 }

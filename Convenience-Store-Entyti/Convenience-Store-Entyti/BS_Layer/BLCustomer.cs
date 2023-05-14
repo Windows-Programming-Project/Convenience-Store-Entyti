@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Convenience_Store_Entyti.BS_Layer
 {
-    class BLCustomer
+    class BLLoyalCustomers
     {
-        public DataTable TakeCustomer()
+        public DataTable TakeLoyalCustomers()
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            var det = from p in qlstoreEntity.Customers select p;
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            var det = from p in qlstoreEntity.LoyalCustomers select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("cID");
             dt.Columns.Add("cName");
@@ -24,22 +24,22 @@ namespace Convenience_Store_Entyti.BS_Layer
             }
             return dt;
         }
-        public bool AddCustomer(string cID, string cName, float TotalPay, string cPhone, ref string err)
+        public bool AddLoyalCustomers(string cID, string cName, float TotalPay, string cPhone, ref string err)
         {
             try
             {
                 // create a new instance of the DbContext object
-                ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+                ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
 
-                // create a new instance of the Customer object and set its properties
-                Customer cust = new Customer();
+                // create a new instance of the LoyalCustomers object and set its properties
+                LoyalCustomer cust = new LoyalCustomer();
                 cust.cID = cID;
                 cust.cName = cName;
                 cust.cTotalpay = TotalPay;
                 cust.cPhoneNum = cPhone;
 
-                // add the new customer to the DbContext object and save changes to the database
-                qlstoreEntity.Customers.Add(cust);
+                // add the new LoyalCustomers to the DbContext object and save changes to the database
+                qlstoreEntity.LoyalCustomers.Add(cust);
                 qlstoreEntity.SaveChanges();
 
                 // return true to indicate success
@@ -54,19 +54,19 @@ namespace Convenience_Store_Entyti.BS_Layer
                 return false;
             }
         }
-        public bool UpdateCustomer(string cID, string cName, float TotalPay, string cPhone, ref string err)
+        public bool UpdateLoyalCustomers(string cID, string cName, float TotalPay, string cPhone, ref string err)
         {
             try
             {
                 // create a new instance of the DbContext object
-                ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+                ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
 
-                // retrieve the existing customer from the database using the specified cID
-                Customer cust = qlstoreEntity.Customers.FirstOrDefault(c => c.cID == cID);
+                // retrieve the existing LoyalCustomers from the database using the specified cID
+                LoyalCustomer cust = qlstoreEntity.LoyalCustomers.FirstOrDefault(c => c.cID == cID);
 
                 if (cust != null)
                 {
-                    // update the customer's properties with the provided parameters
+                    // update the LoyalCustomers's properties with the provided parameters
                     cust.cName = cName;
                     cust.cTotalpay = TotalPay;
                     cust.cPhoneNum = cPhone;
@@ -79,8 +79,8 @@ namespace Convenience_Store_Entyti.BS_Layer
                 }
                 else
                 {
-                    // set the "err" parameter to indicate that the customer could not be found
-                    err = "Customer with cID " + cID + " could not be found.";
+                    // set the "err" parameter to indicate that the LoyalCustomers could not be found
+                    err = "LoyalCustomers with cID " + cID + " could not be found.";
 
                     // return false to indicate failure
                     return false;
@@ -95,20 +95,20 @@ namespace Convenience_Store_Entyti.BS_Layer
                 return false;
             }
         }
-        public bool DeleteCustomer(string cID, ref string err)
+        public bool DeleteLoyalCustomers(string cID, ref string err)
         {
             try
             {
                 // create a new instance of the DbContext object
-                ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+                ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
 
-                // retrieve the customer to be deleted from the database using the specified cID
-                Customer cust = qlstoreEntity.Customers.FirstOrDefault(c => c.cID == cID);
+                // retrieve the LoyalCustomers to be deleted from the database using the specified cID
+                LoyalCustomer cust = qlstoreEntity.LoyalCustomers.FirstOrDefault(c => c.cID == cID);
 
                 if (cust != null)
                 {
-                    // remove the customer from the DbContext
-                    qlstoreEntity.Customers.Remove(cust);
+                    // remove the LoyalCustomers from the DbContext
+                    qlstoreEntity.LoyalCustomers.Remove(cust);
 
                     // save changes to the database
                     qlstoreEntity.SaveChanges();
@@ -118,8 +118,8 @@ namespace Convenience_Store_Entyti.BS_Layer
                 }
                 else
                 {
-                    // set the "err" parameter to indicate that the customer could not be found
-                    err = "Customer with cID " + cID + " could not be found.";
+                    // set the "err" parameter to indicate that the LoyalCustomers could not be found
+                    err = "LoyalCustomers with cID " + cID + " could not be found.";
 
                     // return false to indicate failure
                     return false;

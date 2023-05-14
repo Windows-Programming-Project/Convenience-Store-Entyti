@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Convenience_Store_Entyti.BS_Layer
 {
-    class BLDetail
+    class BLInvoice_Detail
     {
-        public DataTable TakeDetail()
+        public DataTable TakeInvoice_Detail()
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            var det = from p in qlstoreEntity.Details select p;
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            var det = from p in qlstoreEntity.Invoice_Detail select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("iID");
             dt.Columns.Add("pID");
@@ -24,33 +24,33 @@ namespace Convenience_Store_Entyti.BS_Layer
             }
             return dt;
         }
-       public bool AddDetail(string iID, string pID, int dAmount, float dPrice, ref string err)
+       public bool AddInvoice_Detail(string iID, string pID, int dAmount, float dPrice, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            Detail det = new Detail();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            Invoice_Detail det = new Invoice_Detail();
             det.iID = iID; 
             det.pID = pID; 
             det.dAmount = dAmount;
             det.dPrice = dPrice;
-            qlstoreEntity.Details.Add(det);
+            qlstoreEntity.Invoice_Detail.Add(det);
             qlstoreEntity.SaveChanges();
             return true;
         }
-        public bool DeleteDetail(ref string err, string iID, string pID)
+        public bool DeleteInvoice_Detail(ref string err, string iID, string pID)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            Detail det = new Detail();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            Invoice_Detail det = new Invoice_Detail();
             det.iID = iID;
             det.pID = pID;
-            qlstoreEntity.Details.Attach(det);
-            qlstoreEntity.Details.Remove(det);
+            qlstoreEntity.Invoice_Detail.Attach(det);
+            qlstoreEntity.Invoice_Detail.Remove(det);
             qlstoreEntity.SaveChanges();
             return true;
         }
-        public bool UpdateDetail(string iID, string pID, int dAmount, float dPrice, ref string err)
+        public bool UpdateInvoice_Detail(string iID, string pID, int dAmount, float dPrice, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
-            var maQuery = (from det in qlstoreEntity.Details
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            var maQuery = (from det in qlstoreEntity.Invoice_Detail
                            where det.iID == iID && det.pID == pID
             select det).SingleOrDefault();
             if (maQuery != null)

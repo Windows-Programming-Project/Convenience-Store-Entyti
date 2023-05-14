@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Convenience_Store_Entyti
 {
     public partial class FrmMain : Form

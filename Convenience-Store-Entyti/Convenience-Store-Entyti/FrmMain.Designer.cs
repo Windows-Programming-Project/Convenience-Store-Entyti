@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panelEvent = new System.Windows.Forms.Panel();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.panelShowOnMainForm = new System.Windows.Forms.Panel();
             this.ptbSetting = new System.Windows.Forms.PictureBox();
             this.ptbShutDown = new System.Windows.Forms.PictureBox();
             this.ptbHome = new System.Windows.Forms.PictureBox();
@@ -46,10 +44,14 @@
             this.btCustomerManagement = new System.Windows.Forms.Button();
             this.btEmployeeManagement = new System.Windows.Forms.Button();
             this.btOrder = new System.Windows.Forms.Button();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.panelShowOnMainForm = new System.Windows.Forms.Panel();
+            this.userControlOrder1 = new Convenience_Store_Entyti.DanhMuc.UserControlOrder();
             this.panelEvent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbShutDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
+            this.panelShowOnMainForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEvent
@@ -75,23 +77,6 @@
             this.panelEvent.Name = "panelEvent";
             this.panelEvent.Size = new System.Drawing.Size(200, 779);
             this.panelEvent.TabIndex = 2;
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(136)))), ((int)(((byte)(209)))));
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(200, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1441, 71);
-            this.panelTop.TabIndex = 3;
-            // 
-            // panelShowOnMainForm
-            // 
-            this.panelShowOnMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShowOnMainForm.Location = new System.Drawing.Point(200, 71);
-            this.panelShowOnMainForm.Name = "panelShowOnMainForm";
-            this.panelShowOnMainForm.Size = new System.Drawing.Size(1441, 708);
-            this.panelShowOnMainForm.TabIndex = 4;
             // 
             // ptbSetting
             // 
@@ -317,6 +302,31 @@
             this.btOrder.UseVisualStyleBackColor = true;
             this.btOrder.Click += new System.EventHandler(this.btEmpManagement_Click);
             // 
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(136)))), ((int)(((byte)(209)))));
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(200, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1441, 71);
+            this.panelTop.TabIndex = 3;
+            // 
+            // panelShowOnMainForm
+            // 
+            this.panelShowOnMainForm.Controls.Add(this.userControlOrder1);
+            this.panelShowOnMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShowOnMainForm.Location = new System.Drawing.Point(200, 71);
+            this.panelShowOnMainForm.Name = "panelShowOnMainForm";
+            this.panelShowOnMainForm.Size = new System.Drawing.Size(1441, 708);
+            this.panelShowOnMainForm.TabIndex = 4;
+            // 
+            // userControlOrder1
+            // 
+            this.userControlOrder1.Location = new System.Drawing.Point(0, 0);
+            this.userControlOrder1.Name = "userControlOrder1";
+            this.userControlOrder1.Size = new System.Drawing.Size(1438, 705);
+            this.userControlOrder1.TabIndex = 0;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,6 +343,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbShutDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).EndInit();
+            this.panelShowOnMainForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -357,6 +368,7 @@
         private System.Windows.Forms.Button btProductManagement;
         private System.Windows.Forms.Button btSupplierManagement;
         private System.Windows.Forms.Button btInvoice;
+        private DanhMuc.UserControlOrder userControlOrder1;
     }
 }
 

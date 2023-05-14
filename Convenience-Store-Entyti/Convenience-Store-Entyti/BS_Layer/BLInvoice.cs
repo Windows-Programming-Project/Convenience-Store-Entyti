@@ -12,7 +12,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeInvoice()
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             var inv = from p in qlstoreEntity.Invoices select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("iID");
@@ -28,7 +28,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddInvoice(string iID, string eID, string cID, DateTime iDate, float iTotal, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             Invoice inv = new Invoice();
             inv.iID = iID; 
             inv.eID = eID; 
@@ -41,7 +41,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteInvoice(ref string err, string iID, string eID, string cID)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             Invoice inv = new Invoice();
             inv.iID = iID;
             inv.eID = eID;
@@ -53,7 +53,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateInvoice(string iID, string eID, string cID, DateTime iDate, float iTotal, ref string err)
         {
-            ConvenienceStoreEntityNew qlstoreEntity = new ConvenienceStoreEntityNew();
+            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
             var maQuery = (from inv in qlstoreEntity.Invoices
                            where inv.iID == iID
                            select inv).SingleOrDefault();

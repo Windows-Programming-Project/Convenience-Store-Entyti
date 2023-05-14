@@ -17,7 +17,7 @@ namespace Convenience_Store_Entyti
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Details = new HashSet<Detail>();
+            this.Invoice_Detail = new HashSet<Invoice_Detail>();
         }
     
         public string pID { get; set; }
@@ -27,8 +27,8 @@ namespace Convenience_Store_Entyti
         public string batchID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detail> Details { get; set; }
-        public virtual Type Type { get; set; }
+        public virtual ICollection<Invoice_Detail> Invoice_Detail { get; set; }
         public virtual Stock Stock { get; set; }
+        public virtual Type Type { get; set; }
     }
 }

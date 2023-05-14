@@ -16,7 +16,7 @@ namespace Convenience_Store_Entyti.DanhMuc
         // Khai báo biến kiểm tra việc Thêm hay Sửa dữ liệu
         bool Them;
         string err;
-        BLManuafacture dbMA = new BLManuafacture();
+        BLManuafacturer dbMA = new BLManuafacturer();
         public FrmManuafacture()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             {
 
                 // Đưa dữ liệu lên DataGridView
-                dgvMANUAFACTURE.DataSource = dbMA.TakeManuafacture();
+                dgvMANUAFACTURE.DataSource = dbMA.TakeManuafacturer();
                 // Thay đổi độ rộng cột
                 dgvMANUAFACTURE.AutoResizeColumns();
                 // Xóa trống các đối tượng trong Panel
@@ -146,8 +146,8 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     // Thực hiện lệnh
-                    BLManuafacture blMa = new BLManuafacture();
-                    blMa.AddManuafacture(this.txtmID.Text, this.txtmName.Text, this.txtmLocation.Text, ref err);
+                    BLManuafacturer blMa = new BLManuafacturer();
+                    blMa.AddManuafacturer(this.txtmID.Text, this.txtmName.Text, this.txtmLocation.Text, ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -161,8 +161,8 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 // Thực hiện lệnh
-                BLManuafacture blMa = new BLManuafacture();
-                blMa.UpdateManuafacture(this.txtmID.Text, this.txtmName.Text, this.txtmLocation.Text, ref err);
+                BLManuafacturer blMa = new BLManuafacturer();
+                blMa.UpdateManuafacturer(this.txtmID.Text, this.txtmName.Text, this.txtmLocation.Text, ref err);
                 // Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo
@@ -189,7 +189,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 // Kiểm tra có nhắp chọn nút Ok không?
                 if (traloi == DialogResult.Yes)
                 {
-                    dbMA.DeleteManuafacture(ref err, strMA);
+                    dbMA.DeleteManuafacturerr(ref err, strMA);
                     // Cập nhật lại DataGridView
                     LoadData();
                     // Thông báo

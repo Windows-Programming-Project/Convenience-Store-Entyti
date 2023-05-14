@@ -29,7 +29,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             try
             {
                 // push on data GRV
-                dgvAccount.DataSource = dbAccount.TakeAccount();
+               // dgvAccount.DataSource = dbAccount.TakeAccount();
                 // chang size table
                 dgvAccount.AutoResizeColumns();
                 //
@@ -66,7 +66,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLAccount blACC = new BLAccount();
-                    blACC.AddAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
+                  //  blACC.AddAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
                     // Thông báo 
                     if (err != null && Add == false)
                     {
@@ -85,7 +85,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 BLAccount blACC = new BLAccount();
-                blACC.AddAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
+                //blACC.AddAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());
@@ -109,7 +109,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLAccount blACC = new BLAccount();
-                    blACC.UpdateAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
+                   // blACC.UpdateAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
                     if (err != null && Add == false)
                     {
                         MessageBox.Show(err.ToString());
@@ -127,7 +127,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 BLAccount blACC = new BLAccount();
-                blACC.UpdateAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
+                //blACC.UpdateAccount(txtUserNamAccount.Text, txtPassAccount.Text, txtEIDAccount.Text, txtEmailAccount.Text, Convert.ToBoolean(txtAcctiveACC.Text), ref err);
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());
@@ -150,7 +150,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLAccount blACC = new BLAccount();
-                    blACC.DeleteAccount(txtUserNamAccount.Text, ref err);
+                  //  blACC.DeleteAccount(txtUserNamAccount.Text, ref err);
                     if (err != null && Add == false)
                     {
                         MessageBox.Show(err.ToString());
@@ -168,7 +168,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 BLAccount blACC = new BLAccount();
-                blACC.DeleteAccount(txtUserNamAccount.Text, ref err);
+             //   blACC.DeleteAccount(txtUserNamAccount.Text, ref err);
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());

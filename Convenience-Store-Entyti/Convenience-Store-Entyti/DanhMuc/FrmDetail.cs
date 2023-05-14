@@ -16,7 +16,7 @@ namespace Convenience_Store_Entyti.DanhMuc
         // Khai báo biến kiểm tra việc Thêm hay Sửa dữ liệu
         bool Them;
         string err;
-        BLDetail dbTY = new BLDetail();
+        BLInvoice_Detail dbTY = new BLInvoice_Detail();
         public FrmDetail()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             {
 
                 // Đưa dữ liệu lên DataGridView
-                dgvDETAIL.DataSource = dbTY.TakeDetail();
+                dgvDETAIL.DataSource = dbTY.TakeInvoice_Detail();
                 // Thay đổi độ rộng cột
                 dgvDETAIL.AutoResizeColumns();
                 // Xóa trống các đối tượng trong Panel
@@ -133,8 +133,8 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     // Thực hiện lệnh
-                    BLDetail blDe = new BLDetail();
-                    blDe.AddDetail(this.txtIDI.Text, this.txtIDP.Text, int.Parse(this.txtdAmount.Text), float.Parse(this.txtdPrice.Text), ref err);
+                   BLInvoice_Detail blDe = new BLInvoice_Detail();
+                    blDe.AddInvoice_Detail(this.txtIDI.Text, this.txtIDP.Text, int.Parse(this.txtdAmount.Text), float.Parse(this.txtdPrice.Text), ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -148,8 +148,8 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 // Thực hiện lệnh
-                BLDetail blDe = new BLDetail();
-                blDe.UpdateDetail(this.txtIDI.Text, this.txtIDP.Text, int.Parse(this.txtdAmount.Text), float.Parse(this.txtdPrice.Text), ref err);
+               BLInvoice_Detail blDe = new BLInvoice_Detail();
+                blDe.UpdateInvoice_Detail(this.txtIDI.Text, this.txtIDP.Text, int.Parse(this.txtdAmount.Text), float.Parse(this.txtdPrice.Text), ref err);
                 // Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo
@@ -194,7 +194,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 // Kiểm tra có nhắp chọn nút Ok không?
                 if (traloi == DialogResult.Yes)
                 {
-                    dbTY.DeleteDetail(ref err, strDE1, strDE2);
+                    dbTY.DeleteInvoice_Detail(ref err, strDE1, strDE2);
                     // Cập nhật lại DataGridView
                     LoadData();
                     // Thông báo

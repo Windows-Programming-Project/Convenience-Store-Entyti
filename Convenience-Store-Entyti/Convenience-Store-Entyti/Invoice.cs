@@ -17,7 +17,7 @@ namespace Convenience_Store_Entyti
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Invoice()
         {
-            this.Details = new HashSet<Detail>();
+            this.Invoice_Detail = new HashSet<Invoice_Detail>();
         }
     
         public string iID { get; set; }
@@ -25,10 +25,11 @@ namespace Convenience_Store_Entyti
         public string cID { get; set; }
         public Nullable<System.DateTime> iDate { get; set; }
         public Nullable<double> iTotalpay { get; set; }
+        public Nullable<double> iFinalTotalpay { get; set; }
     
-        public virtual Customer Customer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detail> Details { get; set; }
         public virtual Employee Employee { get; set; }
+        public virtual LoyalCustomer LoyalCustomer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Invoice_Detail> Invoice_Detail { get; set; }
     }
 }
