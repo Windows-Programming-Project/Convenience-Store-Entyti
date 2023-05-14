@@ -96,3 +96,41 @@ D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Sto
 D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
 D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
 D:\UTE\year 2 hk2\Window programing\Final project\Entity Version\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FirstUserControlEmp.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmAccount.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmCustomer.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmDetail.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmEmployee.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmInvoice.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.FrmProduct.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.UserControlCustomer.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.DanhMuc.UserControlOrder.resources
+D:\FinalWindow\Convenience-Store-Entyti\Convenience-Store-Entyti\Convenience-Store-Entyti\obj\Debug\Convenience_Store_Entyti.FrmMain.resources

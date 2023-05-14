@@ -49,9 +49,10 @@
             // 
             // btnReloadAccount
             // 
-            this.btnReloadAccount.Location = new System.Drawing.Point(791, 209);
+            this.btnReloadAccount.Location = new System.Drawing.Point(593, 170);
+            this.btnReloadAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReloadAccount.Name = "btnReloadAccount";
-            this.btnReloadAccount.Size = new System.Drawing.Size(94, 45);
+            this.btnReloadAccount.Size = new System.Drawing.Size(70, 37);
             this.btnReloadAccount.TabIndex = 31;
             this.btnReloadAccount.Text = "Reload";
             this.btnReloadAccount.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@
             // 
             // btnExitAccount
             // 
-            this.btnExitAccount.Location = new System.Drawing.Point(791, 275);
+            this.btnExitAccount.Location = new System.Drawing.Point(593, 223);
+            this.btnExitAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExitAccount.Name = "btnExitAccount";
-            this.btnExitAccount.Size = new System.Drawing.Size(94, 45);
+            this.btnExitAccount.Size = new System.Drawing.Size(70, 37);
             this.btnExitAccount.TabIndex = 32;
             this.btnExitAccount.Text = "Exit";
             this.btnExitAccount.UseVisualStyleBackColor = true;
@@ -69,9 +71,10 @@
             // 
             // btnDeleteAccount
             // 
-            this.btnDeleteAccount.Location = new System.Drawing.Point(791, 141);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(593, 115);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(94, 45);
+            this.btnDeleteAccount.Size = new System.Drawing.Size(70, 37);
             this.btnDeleteAccount.TabIndex = 33;
             this.btnDeleteAccount.Text = "Delete";
             this.btnDeleteAccount.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // 
             // btnChangedAccount
             // 
-            this.btnChangedAccount.Location = new System.Drawing.Point(791, 73);
+            this.btnChangedAccount.Location = new System.Drawing.Point(593, 59);
+            this.btnChangedAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangedAccount.Name = "btnChangedAccount";
-            this.btnChangedAccount.Size = new System.Drawing.Size(94, 45);
+            this.btnChangedAccount.Size = new System.Drawing.Size(70, 37);
             this.btnChangedAccount.TabIndex = 34;
             this.btnChangedAccount.Text = "Changed";
             this.btnChangedAccount.UseVisualStyleBackColor = true;
@@ -89,9 +93,10 @@
             // 
             // btnAddAccount
             // 
-            this.btnAddAccount.Location = new System.Drawing.Point(791, 5);
+            this.btnAddAccount.Location = new System.Drawing.Point(593, 4);
+            this.btnAddAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddAccount.Name = "btnAddAccount";
-            this.btnAddAccount.Size = new System.Drawing.Size(94, 45);
+            this.btnAddAccount.Size = new System.Drawing.Size(70, 37);
             this.btnAddAccount.TabIndex = 35;
             this.btnAddAccount.Text = "Add";
             this.btnAddAccount.UseVisualStyleBackColor = true;
@@ -103,104 +108,115 @@
             this.dgvAccount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvAccount.Location = new System.Drawing.Point(0, 394);
+            this.dgvAccount.Location = new System.Drawing.Point(0, 320);
+            this.dgvAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.RowHeadersWidth = 51;
             this.dgvAccount.RowTemplate.Height = 24;
-            this.dgvAccount.Size = new System.Drawing.Size(1612, 326);
+            this.dgvAccount.Size = new System.Drawing.Size(1028, 265);
             this.dgvAccount.TabIndex = 30;
             this.dgvAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellContentClick);
             // 
             // lbEmailACC
             // 
             this.lbEmailACC.AutoSize = true;
-            this.lbEmailACC.Location = new System.Drawing.Point(57, 238);
+            this.lbEmailACC.Location = new System.Drawing.Point(43, 193);
+            this.lbEmailACC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmailACC.Name = "lbEmailACC";
-            this.lbEmailACC.Size = new System.Drawing.Size(41, 16);
+            this.lbEmailACC.Size = new System.Drawing.Size(32, 13);
             this.lbEmailACC.TabIndex = 25;
             this.lbEmailACC.Text = "Email";
             // 
             // lbAcctiveACC
             // 
             this.lbAcctiveACC.AutoSize = true;
-            this.lbAcctiveACC.Location = new System.Drawing.Point(57, 304);
+            this.lbAcctiveACC.Location = new System.Drawing.Point(43, 247);
+            this.lbAcctiveACC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAcctiveACC.Name = "lbAcctiveACC";
-            this.lbAcctiveACC.Size = new System.Drawing.Size(51, 16);
+            this.lbAcctiveACC.Size = new System.Drawing.Size(43, 13);
             this.lbAcctiveACC.TabIndex = 26;
             this.lbAcctiveACC.Text = "Acctive";
             // 
             // lbEIDAcc
             // 
             this.lbEIDAcc.AutoSize = true;
-            this.lbEIDAcc.Location = new System.Drawing.Point(57, 170);
+            this.lbEIDAcc.Location = new System.Drawing.Point(43, 138);
+            this.lbEIDAcc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEIDAcc.Name = "lbEIDAcc";
-            this.lbEIDAcc.Size = new System.Drawing.Size(32, 16);
+            this.lbEIDAcc.Size = new System.Drawing.Size(28, 13);
             this.lbEIDAcc.TabIndex = 27;
             this.lbEIDAcc.Text = "E ID";
             // 
             // lbPassACC
             // 
             this.lbPassACC.AutoSize = true;
-            this.lbPassACC.Location = new System.Drawing.Point(57, 102);
+            this.lbPassACC.Location = new System.Drawing.Point(43, 83);
+            this.lbPassACC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPassACC.Name = "lbPassACC";
-            this.lbPassACC.Size = new System.Drawing.Size(74, 16);
+            this.lbPassACC.Size = new System.Drawing.Size(59, 13);
             this.lbPassACC.TabIndex = 28;
             this.lbPassACC.Text = "Pass Word";
             // 
             // blUserNameAC
             // 
             this.blUserNameAC.AutoSize = true;
-            this.blUserNameAC.Location = new System.Drawing.Point(57, 34);
+            this.blUserNameAC.Location = new System.Drawing.Point(43, 28);
+            this.blUserNameAC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blUserNameAC.Name = "blUserNameAC";
-            this.blUserNameAC.Size = new System.Drawing.Size(76, 16);
+            this.blUserNameAC.Size = new System.Drawing.Size(60, 13);
             this.blUserNameAC.TabIndex = 29;
             this.blUserNameAC.Text = "User Name";
             // 
             // txtEmailAccount
             // 
-            this.txtEmailAccount.Location = new System.Drawing.Point(43, 207);
+            this.txtEmailAccount.Location = new System.Drawing.Point(32, 168);
+            this.txtEmailAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmailAccount.Multiline = true;
             this.txtEmailAccount.Name = "txtEmailAccount";
-            this.txtEmailAccount.Size = new System.Drawing.Size(204, 47);
+            this.txtEmailAccount.Size = new System.Drawing.Size(154, 39);
             this.txtEmailAccount.TabIndex = 20;
             // 
             // txtAcctiveACC
             // 
-            this.txtAcctiveACC.Location = new System.Drawing.Point(43, 273);
+            this.txtAcctiveACC.Location = new System.Drawing.Point(32, 222);
+            this.txtAcctiveACC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAcctiveACC.Multiline = true;
             this.txtAcctiveACC.Name = "txtAcctiveACC";
-            this.txtAcctiveACC.Size = new System.Drawing.Size(204, 47);
+            this.txtAcctiveACC.Size = new System.Drawing.Size(154, 39);
             this.txtAcctiveACC.TabIndex = 21;
             // 
             // txtEIDAccount
             // 
-            this.txtEIDAccount.Location = new System.Drawing.Point(43, 139);
+            this.txtEIDAccount.Location = new System.Drawing.Point(32, 113);
+            this.txtEIDAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEIDAccount.Multiline = true;
             this.txtEIDAccount.Name = "txtEIDAccount";
-            this.txtEIDAccount.Size = new System.Drawing.Size(204, 47);
+            this.txtEIDAccount.Size = new System.Drawing.Size(154, 39);
             this.txtEIDAccount.TabIndex = 22;
             // 
             // txtPassAccount
             // 
-            this.txtPassAccount.Location = new System.Drawing.Point(43, 71);
+            this.txtPassAccount.Location = new System.Drawing.Point(32, 58);
+            this.txtPassAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassAccount.Multiline = true;
             this.txtPassAccount.Name = "txtPassAccount";
-            this.txtPassAccount.Size = new System.Drawing.Size(204, 47);
+            this.txtPassAccount.Size = new System.Drawing.Size(154, 39);
             this.txtPassAccount.TabIndex = 23;
             // 
             // txtUserNamAccount
             // 
-            this.txtUserNamAccount.Location = new System.Drawing.Point(43, 3);
+            this.txtUserNamAccount.Location = new System.Drawing.Point(32, 2);
+            this.txtUserNamAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUserNamAccount.Multiline = true;
             this.txtUserNamAccount.Name = "txtUserNamAccount";
-            this.txtUserNamAccount.Size = new System.Drawing.Size(204, 47);
+            this.txtUserNamAccount.Size = new System.Drawing.Size(154, 39);
             this.txtUserNamAccount.TabIndex = 24;
             // 
             // FrmAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1612, 720);
+            this.ClientSize = new System.Drawing.Size(1028, 585);
             this.Controls.Add(this.btnReloadAccount);
             this.Controls.Add(this.btnExitAccount);
             this.Controls.Add(this.btnDeleteAccount);
@@ -217,6 +233,7 @@
             this.Controls.Add(this.txtEIDAccount);
             this.Controls.Add(this.txtPassAccount);
             this.Controls.Add(this.txtUserNamAccount);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAccount";
             this.Text = "FrmAccount";
             this.Load += new System.EventHandler(this.FrmAccount_Load);
