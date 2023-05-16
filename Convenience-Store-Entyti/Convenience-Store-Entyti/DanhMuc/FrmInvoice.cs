@@ -132,7 +132,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 {
                     // Thực hiện lệnh
                     BLInvoice blIn = new BLInvoice();
-                    blIn.AddInvoice(this.txtIDI.Text, this.txtIDE.Text, this.txtIDC.Text, DateTime.Parse(this.txtiDate.Text), float.Parse(this.txtiTotal.Text), ref err);
+                   // blIn.AddInvoice(this.txtIDI.Text, this.txtIDE.Text, this.txtIDC.Text, DateTime.Parse(this.txtiDate.Text), float.Parse(this.txtiTotal.Text), ref err);
                     // Load lại dữ liệu trên DataGridView
                     LoadData();
                     // Thông báo
@@ -147,7 +147,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             {
                 // Thực hiện lệnh
                 BLInvoice blIn = new BLInvoice();
-                blIn.UpdateInvoice(this.txtIDI.Text, this.txtIDE.Text, this.txtIDC.Text, DateTime.Parse(this.txtiDate.Text), float.Parse(this.txtiTotal.Text), ref err);
+               // blIn.UpdateInvoice(this.txtIDI.Text, this.txtIDE.Text, this.txtIDC.Text, DateTime.Parse(this.txtiDate.Text), float.Parse(this.txtiTotal.Text), ref err);
                 // Load lại dữ liệu trên DataGridView
                 LoadData();
                 // Thông báo

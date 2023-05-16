@@ -33,9 +33,9 @@
             this.ptbShutDown = new System.Windows.Forms.PictureBox();
             this.ptbHome = new System.Windows.Forms.PictureBox();
             this.btManuafacture = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btInvoice = new System.Windows.Forms.Button();
             this.btInvoice_Detail = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btProductManagement = new System.Windows.Forms.Button();
             this.btSupplierManagement = new System.Windows.Forms.Button();
             this.btTypeManagement = new System.Windows.Forms.Button();
@@ -45,13 +45,15 @@
             this.btEmployeeManagement = new System.Windows.Forms.Button();
             this.btOrder = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.btEmployee_Shift = new System.Windows.Forms.Button();
+            this.btEmployee_late = new System.Windows.Forms.Button();
             this.panelShowOnMainForm = new System.Windows.Forms.Panel();
-            this.userControlOrder1 = new Convenience_Store_Entyti.DanhMuc.UserControlOrder();
+            this.btnRank = new System.Windows.Forms.Button();
             this.panelEvent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbShutDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
-            this.panelShowOnMainForm.SuspendLayout();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEvent
@@ -61,9 +63,10 @@
             this.panelEvent.Controls.Add(this.ptbShutDown);
             this.panelEvent.Controls.Add(this.ptbHome);
             this.panelEvent.Controls.Add(this.btManuafacture);
+            this.panelEvent.Controls.Add(this.btnRank);
+            this.panelEvent.Controls.Add(this.button1);
             this.panelEvent.Controls.Add(this.btInvoice);
             this.panelEvent.Controls.Add(this.btInvoice_Detail);
-            this.panelEvent.Controls.Add(this.button3);
             this.panelEvent.Controls.Add(this.btProductManagement);
             this.panelEvent.Controls.Add(this.btSupplierManagement);
             this.panelEvent.Controls.Add(this.btTypeManagement);
@@ -75,13 +78,13 @@
             this.panelEvent.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEvent.Location = new System.Drawing.Point(0, 0);
             this.panelEvent.Name = "panelEvent";
-            this.panelEvent.Size = new System.Drawing.Size(200, 779);
+            this.panelEvent.Size = new System.Drawing.Size(310, 1080);
             this.panelEvent.TabIndex = 2;
             // 
             // ptbSetting
             // 
             this.ptbSetting.Image = global::Convenience_Store_Entyti.Properties.Resources.setting;
-            this.ptbSetting.Location = new System.Drawing.Point(3, 749);
+            this.ptbSetting.Location = new System.Drawing.Point(12, 1032);
             this.ptbSetting.Name = "ptbSetting";
             this.ptbSetting.Size = new System.Drawing.Size(44, 27);
             this.ptbSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +95,7 @@
             // ptbShutDown
             // 
             this.ptbShutDown.Image = global::Convenience_Store_Entyti.Properties.Resources.shutdown1;
-            this.ptbShutDown.Location = new System.Drawing.Point(153, 749);
+            this.ptbShutDown.Location = new System.Drawing.Point(260, 1032);
             this.ptbShutDown.Name = "ptbShutDown";
             this.ptbShutDown.Size = new System.Drawing.Size(44, 27);
             this.ptbShutDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,14 +120,31 @@
             this.btManuafacture.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btManuafacture.ForeColor = System.Drawing.Color.White;
             this.btManuafacture.Image = global::Convenience_Store_Entyti.Properties.Resources.manuafacture;
-            this.btManuafacture.Location = new System.Drawing.Point(0, 553);
+            this.btManuafacture.Location = new System.Drawing.Point(-1, 503);
             this.btManuafacture.Name = "btManuafacture";
-            this.btManuafacture.Size = new System.Drawing.Size(200, 44);
+            this.btManuafacture.Size = new System.Drawing.Size(245, 44);
             this.btManuafacture.TabIndex = 0;
             this.btManuafacture.Text = "Manuafacture";
+            this.btManuafacture.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btManuafacture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btManuafacture.UseVisualStyleBackColor = true;
-            this.btManuafacture.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btManuafacture.Click += new System.EventHandler(this.btManuafacture_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Convenience_Store_Entyti.Properties.Resources.Invoice;
+            this.button1.Location = new System.Drawing.Point(12, 668);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 44);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Analysis ";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btInvoice
             // 
@@ -133,14 +153,14 @@
             this.btInvoice.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInvoice.ForeColor = System.Drawing.Color.White;
             this.btInvoice.Image = global::Convenience_Store_Entyti.Properties.Resources.Invoice;
-            this.btInvoice.Location = new System.Drawing.Point(-1, 653);
+            this.btInvoice.Location = new System.Drawing.Point(12, 603);
             this.btInvoice.Name = "btInvoice";
             this.btInvoice.Size = new System.Drawing.Size(200, 44);
             this.btInvoice.TabIndex = 0;
             this.btInvoice.Text = "Invoice";
             this.btInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btInvoice.UseVisualStyleBackColor = true;
-            this.btInvoice.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btInvoice.Click += new System.EventHandler(this.btInvoice_Click);
             // 
             // btInvoice_Detail
             // 
@@ -149,30 +169,15 @@
             this.btInvoice_Detail.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInvoice_Detail.ForeColor = System.Drawing.Color.White;
             this.btInvoice_Detail.Image = global::Convenience_Store_Entyti.Properties.Resources.invoice_detail;
-            this.btInvoice_Detail.Location = new System.Drawing.Point(-1, 603);
+            this.btInvoice_Detail.Location = new System.Drawing.Point(-1, 553);
             this.btInvoice_Detail.Name = "btInvoice_Detail";
-            this.btInvoice_Detail.Size = new System.Drawing.Size(200, 44);
+            this.btInvoice_Detail.Size = new System.Drawing.Size(257, 44);
             this.btInvoice_Detail.TabIndex = 0;
             this.btInvoice_Detail.Text = "Invoice Detail";
+            this.btInvoice_Detail.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btInvoice_Detail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btInvoice_Detail.UseVisualStyleBackColor = true;
-            this.btInvoice_Detail.Click += new System.EventHandler(this.btEmpManagement_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Convenience_Store_Entyti.Properties.Resources.order;
-            this.button3.Location = new System.Drawing.Point(0, 603);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 44);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Order";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btInvoice_Detail.Click += new System.EventHandler(this.btInvoice_Detail_Click);
             // 
             // btProductManagement
             // 
@@ -181,14 +186,14 @@
             this.btProductManagement.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btProductManagement.ForeColor = System.Drawing.Color.White;
             this.btProductManagement.Image = global::Convenience_Store_Entyti.Properties.Resources.product;
-            this.btProductManagement.Location = new System.Drawing.Point(0, 503);
+            this.btProductManagement.Location = new System.Drawing.Point(-1, 453);
             this.btProductManagement.Name = "btProductManagement";
             this.btProductManagement.Size = new System.Drawing.Size(200, 44);
             this.btProductManagement.TabIndex = 0;
             this.btProductManagement.Text = "Product";
             this.btProductManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btProductManagement.UseVisualStyleBackColor = true;
-            this.btProductManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btProductManagement.Click += new System.EventHandler(this.btProductManagement_Click);
             // 
             // btSupplierManagement
             // 
@@ -197,14 +202,14 @@
             this.btSupplierManagement.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSupplierManagement.ForeColor = System.Drawing.Color.White;
             this.btSupplierManagement.Image = global::Convenience_Store_Entyti.Properties.Resources.supplier;
-            this.btSupplierManagement.Location = new System.Drawing.Point(0, 453);
+            this.btSupplierManagement.Location = new System.Drawing.Point(-1, 403);
             this.btSupplierManagement.Name = "btSupplierManagement";
             this.btSupplierManagement.Size = new System.Drawing.Size(200, 44);
             this.btSupplierManagement.TabIndex = 0;
             this.btSupplierManagement.Text = "Supplier";
             this.btSupplierManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSupplierManagement.UseVisualStyleBackColor = true;
-            this.btSupplierManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btSupplierManagement.Click += new System.EventHandler(this.btSupplierManagement_Click);
             // 
             // btTypeManagement
             // 
@@ -213,14 +218,14 @@
             this.btTypeManagement.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTypeManagement.ForeColor = System.Drawing.Color.White;
             this.btTypeManagement.Image = global::Convenience_Store_Entyti.Properties.Resources.types;
-            this.btTypeManagement.Location = new System.Drawing.Point(3, 403);
+            this.btTypeManagement.Location = new System.Drawing.Point(-1, 353);
             this.btTypeManagement.Name = "btTypeManagement";
             this.btTypeManagement.Size = new System.Drawing.Size(200, 44);
             this.btTypeManagement.TabIndex = 0;
             this.btTypeManagement.Text = "Type";
             this.btTypeManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTypeManagement.UseVisualStyleBackColor = true;
-            this.btTypeManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btTypeManagement.Click += new System.EventHandler(this.btTypeManagement_Click);
             // 
             // btAccountManagement
             // 
@@ -229,14 +234,14 @@
             this.btAccountManagement.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAccountManagement.ForeColor = System.Drawing.Color.White;
             this.btAccountManagement.Image = global::Convenience_Store_Entyti.Properties.Resources.account;
-            this.btAccountManagement.Location = new System.Drawing.Point(0, 353);
+            this.btAccountManagement.Location = new System.Drawing.Point(32, 811);
             this.btAccountManagement.Name = "btAccountManagement";
             this.btAccountManagement.Size = new System.Drawing.Size(200, 44);
             this.btAccountManagement.TabIndex = 0;
             this.btAccountManagement.Text = "Account";
             this.btAccountManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btAccountManagement.UseVisualStyleBackColor = true;
-            this.btAccountManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btAccountManagement.Click += new System.EventHandler(this.btAccountManagement_Click);
             // 
             // btStockManagement
             // 
@@ -252,7 +257,7 @@
             this.btStockManagement.Text = "Stock";
             this.btStockManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btStockManagement.UseVisualStyleBackColor = true;
-            this.btStockManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btStockManagement.Click += new System.EventHandler(this.btStockManagement_Click);
             // 
             // btCustomerManagement
             // 
@@ -268,7 +273,7 @@
             this.btCustomerManagement.Text = "Customer";
             this.btCustomerManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btCustomerManagement.UseVisualStyleBackColor = true;
-            this.btCustomerManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btCustomerManagement.Click += new System.EventHandler(this.btCustomerManagement_Click);
             // 
             // btEmployeeManagement
             // 
@@ -284,7 +289,7 @@
             this.btEmployeeManagement.Text = "Employee";
             this.btEmployeeManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btEmployeeManagement.UseVisualStyleBackColor = true;
-            this.btEmployeeManagement.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btEmployeeManagement.Click += new System.EventHandler(this.btEmployeeManagement_Click);
             // 
             // btOrder
             // 
@@ -293,45 +298,89 @@
             this.btOrder.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOrder.ForeColor = System.Drawing.Color.White;
             this.btOrder.Image = global::Convenience_Store_Entyti.Properties.Resources.order;
-            this.btOrder.Location = new System.Drawing.Point(-1, 153);
+            this.btOrder.Location = new System.Drawing.Point(12, 153);
             this.btOrder.Name = "btOrder";
             this.btOrder.Size = new System.Drawing.Size(200, 44);
             this.btOrder.TabIndex = 0;
             this.btOrder.Text = "Order";
             this.btOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btOrder.UseVisualStyleBackColor = true;
-            this.btOrder.Click += new System.EventHandler(this.btEmpManagement_Click);
+            this.btOrder.Click += new System.EventHandler(this.btOrder_Click);
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(136)))), ((int)(((byte)(209)))));
+            this.panelTop.Controls.Add(this.btEmployee_Shift);
+            this.panelTop.Controls.Add(this.btEmployee_late);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(200, 0);
+            this.panelTop.Location = new System.Drawing.Point(310, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1441, 71);
+            this.panelTop.Size = new System.Drawing.Size(1610, 71);
             this.panelTop.TabIndex = 3;
+            // 
+            // btEmployee_Shift
+            // 
+            this.btEmployee_Shift.FlatAppearance.BorderSize = 0;
+            this.btEmployee_Shift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEmployee_Shift.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEmployee_Shift.ForeColor = System.Drawing.Color.White;
+            this.btEmployee_Shift.Image = global::Convenience_Store_Entyti.Properties.Resources.employee1;
+            this.btEmployee_Shift.Location = new System.Drawing.Point(349, 12);
+            this.btEmployee_Shift.Name = "btEmployee_Shift";
+            this.btEmployee_Shift.Size = new System.Drawing.Size(346, 44);
+            this.btEmployee_Shift.TabIndex = 0;
+            this.btEmployee_Shift.Text = "Employee  Shift";
+            this.btEmployee_Shift.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btEmployee_Shift.UseVisualStyleBackColor = true;
+            this.btEmployee_Shift.Visible = false;
+            this.btEmployee_Shift.Click += new System.EventHandler(this.btEmployee_Shift_Click);
+            // 
+            // btEmployee_late
+            // 
+            this.btEmployee_late.FlatAppearance.BorderSize = 0;
+            this.btEmployee_late.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEmployee_late.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEmployee_late.ForeColor = System.Drawing.Color.White;
+            this.btEmployee_late.Image = global::Convenience_Store_Entyti.Properties.Resources.employee1;
+            this.btEmployee_late.Location = new System.Drawing.Point(24, 12);
+            this.btEmployee_late.Name = "btEmployee_late";
+            this.btEmployee_late.Size = new System.Drawing.Size(406, 44);
+            this.btEmployee_late.TabIndex = 0;
+            this.btEmployee_late.Text = "Employee Late";
+            this.btEmployee_late.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btEmployee_late.UseVisualStyleBackColor = true;
+            this.btEmployee_late.Visible = false;
+            this.btEmployee_late.Click += new System.EventHandler(this.btEmployee_late_Click);
             // 
             // panelShowOnMainForm
             // 
-            this.panelShowOnMainForm.Controls.Add(this.userControlOrder1);
             this.panelShowOnMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShowOnMainForm.Location = new System.Drawing.Point(200, 71);
+            this.panelShowOnMainForm.Location = new System.Drawing.Point(310, 71);
             this.panelShowOnMainForm.Name = "panelShowOnMainForm";
-            this.panelShowOnMainForm.Size = new System.Drawing.Size(1441, 708);
+            this.panelShowOnMainForm.Size = new System.Drawing.Size(1610, 1009);
             this.panelShowOnMainForm.TabIndex = 4;
             // 
-            // userControlOrder1
+            // btnRank
             // 
-            this.userControlOrder1.Location = new System.Drawing.Point(0, 0);
-            this.userControlOrder1.Name = "userControlOrder1";
-            this.userControlOrder1.Size = new System.Drawing.Size(1438, 705);
-            this.userControlOrder1.TabIndex = 0;
+            this.btnRank.FlatAppearance.BorderSize = 0;
+            this.btnRank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRank.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRank.ForeColor = System.Drawing.Color.White;
+            this.btnRank.Image = global::Convenience_Store_Entyti.Properties.Resources.Invoice;
+            this.btnRank.Location = new System.Drawing.Point(21, 737);
+            this.btnRank.Name = "btnRank";
+            this.btnRank.Size = new System.Drawing.Size(200, 44);
+            this.btnRank.TabIndex = 0;
+            this.btnRank.Text = "Ranks";
+            this.btnRank.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRank.UseVisualStyleBackColor = true;
+            this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1641, 779);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panelShowOnMainForm);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelEvent);
@@ -343,7 +392,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbShutDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).EndInit();
-            this.panelShowOnMainForm.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -364,11 +413,13 @@
         private System.Windows.Forms.Button btEmployeeManagement;
         private System.Windows.Forms.Button btManuafacture;
         private System.Windows.Forms.Button btInvoice_Detail;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btProductManagement;
         private System.Windows.Forms.Button btSupplierManagement;
         private System.Windows.Forms.Button btInvoice;
-        private DanhMuc.UserControlOrder userControlOrder1;
+        private System.Windows.Forms.Button btEmployee_Shift;
+        private System.Windows.Forms.Button btEmployee_late;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRank;
     }
 }
 

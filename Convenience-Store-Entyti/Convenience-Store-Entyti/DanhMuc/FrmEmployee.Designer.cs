@@ -50,6 +50,10 @@
             this.txtNameEMP = new System.Windows.Forms.TextBox();
             this.txtPhoneEMP = new System.Windows.Forms.TextBox();
             this.txtIDEmp = new System.Windows.Forms.TextBox();
+            this.lbPassword = new System.Windows.Forms.Label();
+            this.txtPasswordAccountEmp = new System.Windows.Forms.TextBox();
+            this.lbUserNameAccount = new System.Windows.Forms.Label();
+            this.txtUserNameEmp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEMPLOYEE)).BeginInit();
             this.SuspendLayout();
             // 
@@ -253,11 +257,49 @@
             this.txtIDEmp.Size = new System.Drawing.Size(267, 45);
             this.txtIDEmp.TabIndex = 4;
             // 
+            // lbPassword
+            // 
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Location = new System.Drawing.Point(750, 334);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(67, 16);
+            this.lbPassword.TabIndex = 39;
+            this.lbPassword.Text = "Password";
+            // 
+            // txtPasswordAccountEmp
+            // 
+            this.txtPasswordAccountEmp.Location = new System.Drawing.Point(733, 305);
+            this.txtPasswordAccountEmp.Multiline = true;
+            this.txtPasswordAccountEmp.Name = "txtPasswordAccountEmp";
+            this.txtPasswordAccountEmp.Size = new System.Drawing.Size(267, 45);
+            this.txtPasswordAccountEmp.TabIndex = 38;
+            // 
+            // lbUserNameAccount
+            // 
+            this.lbUserNameAccount.AutoSize = true;
+            this.lbUserNameAccount.Location = new System.Drawing.Point(450, 334);
+            this.lbUserNameAccount.Name = "lbUserNameAccount";
+            this.lbUserNameAccount.Size = new System.Drawing.Size(121, 16);
+            this.lbUserNameAccount.TabIndex = 37;
+            this.lbUserNameAccount.Text = "Username Account";
+            // 
+            // txtUserNameEmp
+            // 
+            this.txtUserNameEmp.Location = new System.Drawing.Point(433, 305);
+            this.txtUserNameEmp.Multiline = true;
+            this.txtUserNameEmp.Name = "txtUserNameEmp";
+            this.txtUserNameEmp.Size = new System.Drawing.Size(267, 45);
+            this.txtUserNameEmp.TabIndex = 36;
+            // 
             // FrmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1432, 654);
+            this.Controls.Add(this.lbPassword);
+            this.Controls.Add(this.txtPasswordAccountEmp);
+            this.Controls.Add(this.lbUserNameAccount);
+            this.Controls.Add(this.txtUserNameEmp);
             this.Controls.Add(this.dgvEMPLOYEE);
             this.Controls.Add(this.btnDeleteEMP);
             this.Controls.Add(this.btnExitEMP);
@@ -313,5 +355,9 @@
         private System.Windows.Forms.TextBox txtNameEMP;
         private System.Windows.Forms.TextBox txtPhoneEMP;
         private System.Windows.Forms.TextBox txtIDEmp;
+        private System.Windows.Forms.Label lbPassword;
+        private System.Windows.Forms.TextBox txtPasswordAccountEmp;
+        private System.Windows.Forms.Label lbUserNameAccount;
+        private System.Windows.Forms.TextBox txtUserNameEmp;
     }
 }

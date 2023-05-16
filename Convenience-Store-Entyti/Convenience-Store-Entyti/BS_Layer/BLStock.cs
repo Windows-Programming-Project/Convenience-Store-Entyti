@@ -9,9 +9,36 @@ namespace Convenience_Store_Entyti.BS_Layer
 {
     class BLStock
     {
+        public DataTable GetAvailableProducts()
+        {
+            using (var context = new ConvenienceStoreManagementEntities1())
+            {
+                var query = from lp in context.FN_AvailableProducts()
+                            select new
+                            {
+                                lp.pID,
+                                lp.pName,
+                                lp.amountImport,
+                                lp.amountInStock
+                            };
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("pID");
+                dt.Columns.Add("pName");
+                dt.Columns.Add("amountImport", typeof(int));
+                dt.Columns.Add("amountInStock", typeof(int));
+
+                foreach (var row in query)
+                {
+                    dt.Rows.Add(row.pID, row.pName, row.amountImport, row.amountInStock);
+                }
+
+                return dt;
+            }
+        }
         public DataTable TakeStock()
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var stos = from p in qlstoreEntity.Stocks select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("batchID");
@@ -26,7 +53,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddStock(string batchID, DateTime imDate, int amountofProduct,string sID, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Stock sto = new Stock();
             sto.batchID = batchID; sto.imDate = imDate; sto.amountofProduct = amountofProduct;sto.sID = sID;
             qlstoreEntity.Stocks.Add(sto);
@@ -35,7 +62,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteStock(ref string err, string batchID)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Stock sto = new Stock();
             sto.batchID = batchID;
             qlstoreEntity.Stocks.Attach(sto);
@@ -45,7 +72,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateStock(string batchID, DateTime imDate, int amountofProduct, string sID, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var stoQuery = (from sto in qlstoreEntity.Stocks
                            where sto.batchID == batchID
                            select sto).SingleOrDefault();

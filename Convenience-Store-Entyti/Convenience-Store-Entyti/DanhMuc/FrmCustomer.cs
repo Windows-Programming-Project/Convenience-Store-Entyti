@@ -63,7 +63,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLLoyalCustomers blCTM = new BLLoyalCustomers();
-                    blCTM.AddLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);           // Load lại dữ liệu trên DataGridView 
+                   // blCTM.AddLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);           // Load lại dữ liệu trên DataGridView 
                     LoadDataCustomer();
                     if (err != null && Add == false)
                     {
@@ -82,7 +82,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 BLLoyalCustomers blCTM = new BLLoyalCustomers();
-                blCTM.AddLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);
+              //  blCTM.AddLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());
@@ -103,7 +103,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLLoyalCustomers blCTM = new BLLoyalCustomers();
-                    blCTM.UpdateLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);
+                  //  blCTM.UpdateLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);
                     LoadDataCustomer();
                     if (err != null && Add == false)
                     {
@@ -122,7 +122,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             else
             {
                 BLLoyalCustomers blCTM = new BLLoyalCustomers();
-                blCTM.UpdateLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);
+               // blCTM.UpdateLoyalCustomers(txtIDCTM.Text, txtNameCTM.Text, Int32.Parse(txtTotalPayCTM.Text), txtPhoneCTM.Text, ref err);
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());

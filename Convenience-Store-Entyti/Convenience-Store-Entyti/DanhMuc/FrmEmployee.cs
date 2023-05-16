@@ -67,7 +67,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLEmployee blEMP = new BLEmployee();
-                    Add = blEMP.AddEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), ref err);           // Load lại dữ liệu trên DataGridView 
+                    Add = blEMP.AddEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), txtUserNameEmp.Text, txtPasswordAccountEmp.Text, ref err);           // Load lại dữ liệu trên DataGridView 
                     LoadDataEMP();
                     // Thông báo 
                     if(err != null && Add == false)
@@ -89,7 +89,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             {
                 // Thực hiện lệnh 
                 BLEmployee blEMP = new BLEmployee();
-                blEMP.AddEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), ref err);           // Load lại dữ liệu trên DataGridView 
+                blEMP.AddEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), txtUserNameEmp.Text, txtPasswordAccountEmp.Text, ref err);           // Load lại dữ liệu trên DataGridView 
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());
@@ -111,7 +111,7 @@ namespace Convenience_Store_Entyti.DanhMuc
                 try
                 {
                     BLEmployee blEMP = new BLEmployee();
-                    blEMP.UpdateEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), ref err);           // Load lại dữ liệu trên DataGridView 
+                    blEMP.UpdateEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), txtUserNameEmp.Text, txtPasswordAccountEmp.Text, ref err);           // Load lại dữ liệu trên DataGridView 
                     LoadDataEMP();
                     if (err != null && Add == false)
                     {
@@ -131,7 +131,7 @@ namespace Convenience_Store_Entyti.DanhMuc
             {
                 // Thực hiện lệnh 
                 BLEmployee blEMP = new BLEmployee();
-                blEMP.UpdateEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), ref err);           // Load lại dữ liệu trên DataGridView 
+                blEMP.UpdateEmployee(txtIDEmp.Text, txtNameEMP.Text, DateTime.Parse(this.txtDateOfBirthEMP.Text), Convert.ToBoolean(txtGenderEMP.Text), txtPhoneEMP.Text, txtAddressEMP.Text, txtPositionEMP.Text, Int32.Parse(txtSalaryEMP.Text), txtUserNameEmp.Text, txtPasswordAccountEmp.Text, ref err);           // Load lại dữ liệu trên DataGridView 
                 if (err != null && Add == false)
                 {
                     MessageBox.Show(err.ToString());

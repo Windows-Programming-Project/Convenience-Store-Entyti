@@ -11,7 +11,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeSupplier()
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var sups = from p in qlstoreEntity.Suppliers select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("sID");
@@ -25,7 +25,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddSupplier(string sID, string mID, string sName, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Supplier sup = new Supplier();
             sup.sID = sID; sup.mID = mID; sup.sName = sName;
             qlstoreEntity.Suppliers.Add(sup);
@@ -34,7 +34,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteSupplier(ref string err, string sID)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Supplier sup = new Supplier();
             sup.sID = sID;
             qlstoreEntity.Suppliers.Attach(sup);
@@ -44,7 +44,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateSupplier(string sID, string mID, string sName, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var supQuery = (from sup in qlstoreEntity.Suppliers
                            where sup.sID == sID
                            select sup).SingleOrDefault();

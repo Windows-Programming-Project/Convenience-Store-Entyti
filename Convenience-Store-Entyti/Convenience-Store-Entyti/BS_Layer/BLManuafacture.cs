@@ -11,7 +11,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeManuafacturer()
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var mas = from p in qlstoreEntity.Manuafacturers select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("mID");
@@ -25,7 +25,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddManuafacturer(string mID, string mName,string mLocation, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Manuafacturer ma = new Manuafacturer();
             ma.mID = mID; ma.mName = mName;ma.mLocation = mLocation;
             qlstoreEntity.Manuafacturers.Add(ma);
@@ -34,7 +34,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteManuafacturerr(ref string err, string mID)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Manuafacturer ma = new Manuafacturer();
             ma.mID = mID;
             qlstoreEntity.Manuafacturers.Attach(ma);
@@ -44,7 +44,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateManuafacturer(string mID, string mName,string mLocation, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var maQuery = (from ma in qlstoreEntity.Manuafacturers
                            where ma.mID == mID
                            select ma).SingleOrDefault();

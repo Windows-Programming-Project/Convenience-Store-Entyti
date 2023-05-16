@@ -18,7 +18,9 @@ namespace Convenience_Store_Entyti
         public Nullable<System.DateTime> LateDate { get; set; }
         public Nullable<System.TimeSpan> StartTime { get; set; }
         public Nullable<System.TimeSpan> EndTime { get; set; }
+        public string shID { get; set; }
     
         public virtual Employee Employee { get; set; }
+        public virtual Shift Shift { get; set; }
     }
 }

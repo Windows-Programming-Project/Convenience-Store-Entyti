@@ -11,7 +11,7 @@ namespace Convenience_Store_Entyti.BS_Layer
     {
         public DataTable TakeType()
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var tys = from p in qlstoreEntity.Types select p;
             DataTable dt = new DataTable();
             dt.Columns.Add("tID");
@@ -24,7 +24,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool AddType(string tID, string tName,ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Type ty = new Type();
             ty.tID = tID; ty.tName = tName;
             qlstoreEntity.Types.Add(ty);
@@ -33,7 +33,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool DeleteType(ref string err, string tID)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             Type ty = new Type();
             ty.tID = tID;
             qlstoreEntity.Types.Attach(ty);
@@ -43,7 +43,7 @@ namespace Convenience_Store_Entyti.BS_Layer
         }
         public bool UpdateType(string tID, string tName, ref string err)
         {
-            ConvenienceStoreManagementEntities qlstoreEntity = new ConvenienceStoreManagementEntities();
+            ConvenienceStoreManagementEntities1 qlstoreEntity = new ConvenienceStoreManagementEntities1();
             var tyQuery = (from ty in qlstoreEntity.Types
                            where ty.tID == tID
                            select ty).SingleOrDefault();
